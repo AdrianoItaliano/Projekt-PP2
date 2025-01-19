@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <locale>
-#define MAX_LINI 2010
+#define MAX_LINI 1500
 
 using namespace std;
 
@@ -210,6 +210,30 @@ void wypiszDane(const MetarDane& dane, ostream& output) {
     }
     else if (strcmp(dane.pogoda, "-RA") == 0) {
         pogodaOpis = "Lekki deszcz";
+    }
+    else if (strcmp(dane.pogoda, "+RA") == 0) {
+        pogodaOpis = "Silny deszcz";
+    }
+    else if (strcmp(dane.pogoda, "RA") == 0) {
+        pogodaOpis = "Deszcz";
+    }
+    else if (strcmp(dane.pogoda, "-SN") == 0) {
+        pogodaOpis = "Lekki śnieg";
+    }
+    else if (strcmp(dane.pogoda, "+SN") == 0) {
+        pogodaOpis = "Silny śnieg";
+    }
+    else if (strcmp(dane.pogoda, "SN") == 0) {
+        pogodaOpis = "Śnieg";
+    }
+    else if (strcmp(dane.pogoda, "-DZ") == 0) {
+        pogodaOpis = "Lekka mżawka";
+    }
+    else if (strcmp(dane.pogoda, "+DZ") == 0) {
+        pogodaOpis = "Silna mżawka";
+    }
+    else if (strcmp(dane.pogoda, "DZ") == 0) {
+        pogodaOpis = "Mżawka";
     }
     else if (dane.pogoda[0] == '\0') {
         pogodaOpis = "Brak zmian pogodowych";
